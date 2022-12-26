@@ -14,17 +14,17 @@ function letterCombinations(input_digit) {
   };
   
   function backtrack(i, curStr) {
-    if(curStr.length == digits.length){
+    if(curStr.length == input_digit.length){
       res.push(curStr);
       return;
     }
     
-    for(let c of dict[digits[i]]) {
+    for(let c of dict[input_digit[i]]) {
       backtrack(i+1, curStr + c);
     }
   }
   
-  if(digits){
+  if(input_digit){
     backtrack(0,"");
   }
   
