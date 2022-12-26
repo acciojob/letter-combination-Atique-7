@@ -19,16 +19,16 @@ function letterCombinations(input_digit) {
       return;
     }
     
-    for(let c of dict[input_digits[i]) {
+    for(let c of dict[digits[i]]) {
       backtrack(i+1, curStr + c);
     }
   }
   
-  if(input_digits){
+  if(digits){
     backtrack(0,"");
   }
   
-  return res;
+  return res; 
 }
 
 module.exports = letterCombinations;
